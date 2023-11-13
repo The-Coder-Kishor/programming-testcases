@@ -13,7 +13,7 @@ compile_c_files() {
 
 # Function to compare output to expected output
 compare_output() {
-    main < input0.txt > output0.txt
+    ./main < input0.txt > output0.txt
     if [ $? -eq 0 ]; then
         echo "Code execution successful."
     else
@@ -30,7 +30,7 @@ compare_output() {
     fi
     rm output0.txt
 
-    main < input1.txt > output1.txt
+    ./main < input1.txt > output1.txt
     if [ $? -eq 0 ]; then
         echo "Code execution successful."
     else
@@ -47,7 +47,7 @@ compare_output() {
     fi
     rm output1.txt
 
-    main < input2.txt > output2.txt
+    ./main < input2.txt > output2.txt
     if [ $? -eq 0 ]; then
         echo "Code execution successful."
     else
@@ -64,7 +64,7 @@ compare_output() {
     fi
     rm output2.txt
 
-    main < input3.txt > output3.txt
+    ./main < input3.txt > output3.txt
     if [ $? -eq 0 ]; then
         echo "Code execution successful."
     else
@@ -81,15 +81,15 @@ compare_output() {
     fi
     rm output3.txt
 
-    actual_output=$(cat "./mx_histroy")
-    expected_output=$(cat "./expected_mx_history")
+    actual_output=$(cat "./mx_history")
+    expected_output=$(cat "expected_mx_history")
     if [ "$actual_output" = "$expected_output" ]; then
         echo "mx_history passed"
     else
         echo "mx_history failed."
         exit 1
     fi
-    rm mx_histroy
+    rm mx_history
 
     actual_output=$(cat "./outputadd11.txt")
     expected_output=$(cat "./expected_outputadd11.txt")
