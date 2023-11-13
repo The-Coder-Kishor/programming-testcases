@@ -10,3 +10,7 @@ Then provide file permissions:
 ```
 chmod u+x ./validator.sh
 ```
+To run the script:
+```
+./validator.sh
+```
