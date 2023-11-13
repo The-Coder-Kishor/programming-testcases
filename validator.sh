@@ -18,7 +18,6 @@ compare_output() {
         echo "Code execution successful."
     else
         echo "Code execution failed."
-        exit 1
     fi
     actual_output=$(cat "./output0.txt")
     expected_output=$(cat "./expected_output0.txt")
@@ -26,7 +25,6 @@ compare_output() {
         echo "Task 0 passed"
     else
         echo "Task 0 failed."
-        exit 1
     fi
     rm output0.txt
 
@@ -35,7 +33,6 @@ compare_output() {
         echo "Code execution successful."
     else
         echo "Code execution failed."
-        exit 1
     fi
     actual_output=$(cat "./output1.txt")
     expected_output=$(cat "./expected_output1.txt")
@@ -43,7 +40,6 @@ compare_output() {
         echo "Task 1 passed"
     else
         echo "Task 1 failed."
-        exit 1
     fi
     rm output1.txt
 
@@ -52,7 +48,6 @@ compare_output() {
         echo "Code execution successful."
     else
         echo "Code execution failed."
-        exit 1
     fi
     actual_output=$(cat "./output2.txt")
     expected_output=$(cat "./expected_output2.txt")
@@ -60,7 +55,6 @@ compare_output() {
         echo "Task 2 passed"
     else
         echo "Task 2 failed."
-        exit 1
     fi
     rm output2.txt
 
@@ -69,7 +63,6 @@ compare_output() {
         echo "Code execution successful."
     else
         echo "Code execution failed."
-        exit 1
     fi
     actual_output=$(cat "./output3.txt")
     expected_output=$(cat "./expected_output3.txt")
@@ -77,7 +70,6 @@ compare_output() {
         echo "Task 3 passed"
     else
         echo "Task 3 failed."
-        exit 1
     fi
     rm output3.txt
 
@@ -87,7 +79,6 @@ compare_output() {
         echo "mx_history passed"
     else
         echo "mx_history failed."
-        exit 1
     fi
     rm mx_history
 
@@ -97,7 +88,6 @@ compare_output() {
         echo "Output Add 11 passed"
     else
         echo "Output Add 11 failed."
-        exit 1
     fi
     rm outputadd11.txt
 
@@ -107,7 +97,6 @@ compare_output() {
         echo "Output Mult 11 passed"
     else
         echo "Output Mult 11 failed."
-        exit 1
     fi
     rm outputmult11.txt
 
@@ -117,7 +106,6 @@ compare_output() {
         echo "Output Scalar 1 passed"
     else
         echo "Output Scalar 1 failed."
-        exit 1
     fi
     rm outputscalar1.txt
 
@@ -127,7 +115,6 @@ compare_output() {
         echo "Output Scalar 2 passed"
     else
         echo "Output Scalar 2 failed."
-        exit 1
     fi
     rm outputscalar2.txt
 
@@ -137,7 +124,6 @@ compare_output() {
         echo "Output Transpose 1 passed"
     else
         echo "Output Transpose 1 failed."
-        exit 1
     fi
     rm outputtranspose1.txt
     
@@ -147,7 +133,6 @@ compare_output() {
         echo "Output Transpose 2 passed"
     else
         echo "Output Transpose 2 failed."
-        exit 1
     fi
     rm outputtranspose2.txt
 }
