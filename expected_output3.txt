@@ -2,11 +2,6 @@ LOG::history
 LOG::add_matrix 0
 LOG::mult_matrix 0
 LOG::history
-LOG::add_matrix 0
-LOG::mult_matrix 0
-LOG::scalar_mult_matrix 0
-LOG::transpose_matrix 0
-LOG::determinant 0
 LOG::scalar_mult_matrix 0
 LOG::transpose_matrix 0
 LOG::determinant 0
@@ -26,7 +21,6 @@ LOG::scalar_mult_matrix 1
 LOG::history
 LOG::transpose_matrix 1
 LOG::determinant 1
-LOG::add_matrix 1
 LOG::history
 LOG::history
 LOG::history
@@ -34,11 +28,6 @@ LOG::history
 LOG::add_matrix 0
 LOG::mult_matrix 0
 LOG::history
-LOG::add_matrix 0
-LOG::mult_matrix 0
-LOG::scalar_mult_matrix 0
-LOG::transpose_matrix 0
-LOG::determinant 0
 LOG::scalar_mult_matrix 0
 LOG::transpose_matrix 0
 LOG::determinant 0
@@ -58,7 +47,6 @@ LOG::scalar_mult_matrix 1
 LOG::history
 LOG::transpose_matrix 1
 LOG::determinant 1
-LOG::add_matrix 1
 LOG::history
 LOG::history
 LOG::history

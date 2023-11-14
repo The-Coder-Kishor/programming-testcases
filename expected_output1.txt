@@ -10,11 +10,6 @@ LOG::history
 LOG::add_matrix 0
 LOG::mult_matrix 0
 LOG::history
-ERROR: INVALID ARGUMENT
-ERROR: INVALID ARGUMENT
-ERROR: INVALID ARGUMENT
-ERROR: INVALID ARGUMENT
-ERROR: INVALID ARGUMENT
 3 4
 5 10 15 20 
 25 30 35 40 
@@ -39,11 +34,6 @@ LOG::history
 LOG::add_matrix 0
 LOG::mult_matrix 0
 LOG::history
-LOG::add_matrix 0
-LOG::mult_matrix 0
-LOG::scalar_mult_matrix 0
-LOG::transpose_matrix 0
-LOG::determinant 0
 LOG::scalar_mult_matrix 0
 LOG::transpose_matrix 0
 LOG::determinant 0
@@ -62,16 +52,10 @@ LOG::mult_matrix 1
 LOG::scalar_mult_matrix 1
 LOG::history
 ERROR: INVALID ARGUMENT
-ERROR: INVALID ARGUMENT
 LOG::history
 LOG::add_matrix 0
 LOG::mult_matrix 0
 LOG::history
-LOG::add_matrix 0
-LOG::mult_matrix 0
-LOG::scalar_mult_matrix 0
-LOG::transpose_matrix 0
-LOG::determinant 0
 LOG::scalar_mult_matrix 0
 LOG::transpose_matrix 0
 LOG::determinant 0
@@ -91,5 +75,4 @@ LOG::scalar_mult_matrix 1
 LOG::history
 LOG::transpose_matrix 1
 LOG::determinant 1
-LOG::add_matrix 1
 LOG::history
