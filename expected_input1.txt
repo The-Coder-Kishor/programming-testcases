@@ -1,0 +1,78 @@
+2 3
+8 10 12 
+4 6 8 
+4 1
+96 
+280 
+464 
+648 
+LOG::history
+LOG::add_matrix 0
+LOG::mult_matrix 0
+LOG::history
+3 4
+5 10 15 20 
+25 30 35 40 
+45 50 55 60 
+4 3
+1 5 9 
+2 6 10 
+3 7 11 
+4 8 12 
+-62123238
+ERROR: INVALID ARGUMENT
+ERROR: INVALID ARGUMENT
+1 1
+45 
+1 1
+5 
+ERROR: INVALID ARGUMENT
+-62123238
+ERROR: INVALID ARGUMENT
+ERROR: INVALID ARGUMENT
+LOG::history
+LOG::add_matrix 0
+LOG::mult_matrix 0
+LOG::history
+LOG::scalar_mult_matrix 0
+LOG::transpose_matrix 0
+LOG::determinant 0
+LOG::add_matrix 0
+LOG::mult_matrix 0
+LOG::scalar_mult_matrix 0
+LOG::transpose_matrix 0
+LOG::determinant 0
+LOG::add_matrix 1
+LOG::mult_matrix 1
+LOG::scalar_mult_matrix 1
+LOG::transpose_matrix 1
+LOG::determinant 1
+LOG::add_matrix 1
+LOG::mult_matrix 1
+LOG::scalar_mult_matrix 1
+LOG::history
+ERROR: INVALID ARGUMENT
+LOG::history
+LOG::add_matrix 0
+LOG::mult_matrix 0
+LOG::history
+LOG::scalar_mult_matrix 0
+LOG::transpose_matrix 0
+LOG::determinant 0
+LOG::add_matrix 0
+LOG::mult_matrix 0
+LOG::scalar_mult_matrix 0
+LOG::transpose_matrix 0
+LOG::determinant 0
+LOG::add_matrix 1
+LOG::mult_matrix 1
+LOG::scalar_mult_matrix 1
+LOG::transpose_matrix 1
+LOG::determinant 1
+LOG::add_matrix 1
+LOG::mult_matrix 1
+LOG::scalar_mult_matrix 1
+LOG::history
+LOG::transpose_matrix 1
+LOG::determinant 1
+LOG::history

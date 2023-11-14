@@ -23,5 +23,3 @@ LOG::transpose_matrix 1
 LOG::determinant 1
 LOG::history
 LOG::history
-LOG::history
-LOG::history
