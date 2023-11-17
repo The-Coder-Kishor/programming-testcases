@@ -14,3 +14,9 @@ To run the script:
 ```
 ./validator.sh
 ```
+
+If you have valgrind installed on your system, you can run the following comprehensive script to test for valgrind errors too:
+```
+chmod u+x ./valg_output.sh
+./valg_output.sh
+```
