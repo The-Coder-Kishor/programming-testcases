@@ -43,7 +43,7 @@ compare_output() {
     fi
     rm output1.txt
 
-    ./main < input2.txt > output2.txt
+    valgrind --leak-check=yes --log-file=valgrind3.rpt ./main < input2.txt > output2.txt
     if [ $? -eq 0 ]; then
         echo "Code execution successful."
     else
@@ -58,7 +58,7 @@ compare_output() {
     fi
     rm output2.txt
 
-    valgrind --leak-check=yes --log-file=valgrind3.rpt ./main < input3.txt > output3.txt
+    valgrind --leak-check=yes --log-file=valgrind4.rpt ./main < input3.txt > output3.txt
     if [ $? -eq 0 ]; then
         echo "Code execution successful."
     else
@@ -72,6 +72,20 @@ compare_output() {
         echo "Task 3 failed."
     fi
     rm output3.txt
+
+    echo "Valgrind for Test 0"
+    awk '/ERROR SUMMARY:/{getline; print}' "valgrind1.rpt"
+    echo "Valgrind for Test 1"
+    awk '/ERROR SUMMARY:/{getline; print}' "valgrind2.rpt"
+    echo "Valgrind for Test 2"
+    awk '/ERROR SUMMARY:/{getline; print}' "valgrind3.rpt"
+    echo "Valgrind for Test 3"
+    awk '/ERROR SUMMARY:/{getline; print}' "valgrind4.rpt"
+
+    rm valgrind1.rpt
+    rm valgrind2.rpt
+    rm valgrind3.rpt
+    rm valgrind4.rpt
 
     actual_output=$(cat "./mx_history")
     expected_output=$(cat "expected_mx_history")
@@ -135,52 +149,6 @@ compare_output() {
         echo "Output Transpose 2 failed."
     fi
     rm outputtranspose2.txt
-
-    grep -E "^(==|ERROR|LEAK|Command|Memcheck|HEAP SUMMARY)" "valgrind1.rpt" | awk '
-    BEGIN {
-        print "Valgrind Report Summary:"
-        print "=========================\n"
-    }
-    /^==/{ printf("\033[1;34m%s\033[0m\n", $0) }  # Blue color for == lines
-    /^ERROR/{ printf("\033[1;31m%s\033[0m\n", $0) }  # Red color for ERROR lines
-    /^LEAK/{ printf("\033[1;33m%s\033[0m\n", $0) }  # Yellow color for LEAK lines
-    /^Command/{ printf("\033[1;32m%s\033[0m\n", $0) }  # Green color for Command lines
-    /^Memcheck/{ printf("\033[1;35m%s\033[0m\n", $0) }  # Purple color for Memcheck lines
-    /^HEAP SUMMARY/{ printf("\033[1;36m%s\033[0m\n", $0) }  # Cyan color for HEAP SUMMARY lines
-    { print }
-    '
-
-    grep -E "^(==|ERROR|LEAK|Command|Memcheck|HEAP SUMMARY)" "valgrind2.rpt" | awk '
-    BEGIN {
-        print "Valgrind Report Summary:"
-        print "=========================\n"
-    }
-    /^==/{ printf("\033[1;34m%s\033[0m\n", $0) }  # Blue color for == lines
-    /^ERROR/{ printf("\033[1;31m%s\033[0m\n", $0) }  # Red color for ERROR lines
-    /^LEAK/{ printf("\033[1;33m%s\033[0m\n", $0) }  # Yellow color for LEAK lines
-    /^Command/{ printf("\033[1;32m%s\033[0m\n", $0) }  # Green color for Command lines
-    /^Memcheck/{ printf("\033[1;35m%s\033[0m\n", $0) }  # Purple color for Memcheck lines
-    /^HEAP SUMMARY/{ printf("\033[1;36m%s\033[0m\n", $0) }  # Cyan color for HEAP SUMMARY lines
-    { print }
-    '
-
-    grep -E "^(==|ERROR|LEAK|Command|Memcheck|HEAP SUMMARY)" "valgrind3.rpt" | awk '
-    BEGIN {
-        print "Valgrind Report Summary:"
-        print "=========================\n"
-    }
-    /^==/{ printf("\033[1;34m%s\033[0m\n", $0) }  # Blue color for == lines
-    /^ERROR/{ printf("\033[1;31m%s\033[0m\n", $0) }  # Red color for ERROR lines
-    /^LEAK/{ printf("\033[1;33m%s\033[0m\n", $0) }  # Yellow color for LEAK lines
-    /^Command/{ printf("\033[1;32m%s\033[0m\n", $0) }  # Green color for Command lines
-    /^Memcheck/{ printf("\033[1;35m%s\033[0m\n", $0) }  # Purple color for Memcheck lines
-    /^HEAP SUMMARY/{ printf("\033[1;36m%s\033[0m\n", $0) }  # Cyan color for HEAP SUMMARY lines
-    { print }
-    '
-
-    rm valgrind1.rpt
-    rm valgrind2.rpt
-    rm valgrind3.rpt
 }
 
 # Main script
